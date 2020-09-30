@@ -2,17 +2,18 @@
     background-image:url(Pic/6776.jpg);
     background-repeat: no-repeat;
 }
+
 .Teki{
-    position:absolute;
+    position:absolute;/*設定定位:不會被特別定位*/
     background-color:red;
-    left:0;
+    left:0;/*設定方塊定位*/
     top:150px;
-    width:50px;
+    width:50px;/*設定方塊大小*/
     height:50px;
-    animation-name:Teki;
-    animation-duration:2s;
-    animation-iteration-count:infinite;
-    animation-direction:alternate;
+    animation-name:Teki;/*動畫名稱*/
+    animation-duration:2s;/*動畫時間*/
+    animation-iteration-count:infinite;/*重複次數:無限次*/
+    animation-direction:alternate;/*撥放完畢之後反向撥放*/
 }
 @keyframes Teki{
     0%{
@@ -21,4 +22,13 @@
     100%{
         left:1230px;
     }
+}
+
+#Main{
+    position:absolute;
+    background-color:blue;
+    left:615;
+    top:974;
+    width:50px;
+    height:50px;
 }
