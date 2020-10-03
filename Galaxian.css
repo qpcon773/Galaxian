@@ -11,7 +11,7 @@
     width:50px;/*設定方塊大小*/
     height:50px;
     animation-name:Teki;/*動畫名稱*/
-    animation-duration:2s;/*動畫時間*/
+    animation-duration:3s;/*動畫時間*/
     animation-iteration-count:infinite;/*重複次數:無限次*/
     animation-direction:alternate;/*撥放完畢之後反向撥放*/
 }
@@ -20,15 +20,13 @@
         left:0;
     }
     100%{
-        left:1230px;
+        left:590px;
     }
 }
 
 #Main{
     position:absolute;
     background-color:blue;
-    left:615;
-    top:974;
     width:50px;
     height:50px;
 }
