@@ -1,9 +1,18 @@
 /*為了方便底下的運算
   主角機體的原始座標就設定在這裏*/
-
 window.onload=function Start(){
-   Main.style.top=215;
-   Main.style.left=295;
+    Main.style.top=215;
+    Main.style.left=295;
+    
+    setInterval(function Damege(){
+    var MainJS=document.getElementById('Main');
+    var MainX=MainJS.getBoundingClientRect().left;
+    var MainY=MainJS.getBoundingClientRect().top;
+    Move();
+    console.log(MainX);
+    console.log(MainY);
+},1000)
+
 };
 
 document.onkeydown=function(key){
@@ -83,5 +92,9 @@ function Set(KeyNumber){
     會的話就強制貼牆
     反之的話就利用 "parseInt()" 取出純數值的top或left值 ± 速度 + "px" 
     以完成機體移動的事件*/
+
+};
+
+function Move(){
 
 };

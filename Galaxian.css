@@ -3,30 +3,141 @@
     background-repeat: no-repeat;
 }
 
+#Main{
+    position:absolute;
+    background-image:url('PIC/Main.png');
+    width:50px;
+    height:50px;
+}
+/*-------------------------------------------------------------------------------------*/
 .Teki{
     position:absolute;/*設定定位:不會被特別定位*/
-    background-color:red;
-    left:0;/*設定方塊定位*/
-    top:150px;
-    width:50px;/*設定方塊大小*/
-    height:50px;
+    left:4;/*設定圖片定位*/
+    top:50px;
     animation-name:Teki;/*動畫名稱*/
-    animation-duration:3s;/*動畫時間*/
+    animation-duration:2s;/*動畫時間*/
     animation-iteration-count:infinite;/*重複次數:無限次*/
     animation-direction:alternate;/*撥放完畢之後反向撥放*/
 }
 @keyframes Teki{
     0%{
-        left:0;
+        left:4;
     }
     100%{
-        left:590px;
+        left:87px;
     }
 }
-
-#Main{
-    position:absolute;
-    background-color:blue;
-    width:50px;
-    height:50px;
+/*-------------------------------------------------------------------------------------*/
+.Teki2{
+    position:absolute;/*設定定位:不會被特別定位*/
+    left:87;/*設定圖片定位*/
+    top:50px;
+    animation-name:Teki2;/*動畫名稱*/
+    animation-duration:2s;/*動畫時間*/
+    animation-iteration-count:infinite;/*重複次數:無限次*/
+    animation-direction:alternate;/*撥放完畢之後反向撥放*/
 }
+@keyframes Teki2{
+    0%{
+        left:87;
+    }
+    100%{
+        left:170px;
+    }
+}
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+.Teki3{
+    position:absolute;/*設定定位:不會被特別定位*/
+    left:170;/*設定圖片定位*/
+    top:50px;
+    animation-name:Teki3;/*動畫名稱*/
+    animation-duration:2s;/*動畫時間*/
+    animation-iteration-count:infinite;/*重複次數:無限次*/
+    animation-direction:alternate;/*撥放完畢之後反向撥放*/
+}
+@keyframes Teki3{
+    0%{
+        left:170;
+    }
+    100%{
+        left:253px;
+    }
+}
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+.Teki4{
+    position:absolute;/*設定定位:不會被特別定位*/
+    left:253;/*設定圖片定位*/
+    top:50px;
+    animation-name:Teki4;/*動畫名稱*/
+    animation-duration:2s;/*動畫時間*/
+    animation-iteration-count:infinite;/*重複次數:無限次*/
+    animation-direction:alternate;/*撥放完畢之後反向撥放*/
+}
+@keyframes Teki4{
+    0%{
+        left:253;
+    }
+    100%{
+        left:336px;
+    }
+}
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+.Teki5{
+    position:absolute;/*設定定位:不會被特別定位*/
+    left:336;/*設定圖片定位*/
+    top:50px;
+    animation-name:Teki5;/*動畫名稱*/
+    animation-duration:2s;/*動畫時間*/
+    animation-iteration-count:infinite;/*重複次數:無限次*/
+    animation-direction:alternate;/*撥放完畢之後反向撥放*/
+}
+@keyframes Teki5{
+    0%{
+        left:336;
+    }
+    100%{
+        left:419px;
+    }
+}
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+.Teki6{
+    position:absolute;/*設定定位:不會被特別定位*/
+    left:419;/*設定圖片定位*/
+    top:50px;
+    animation-name:Teki6;/*動畫名稱*/
+    animation-duration:2s;/*動畫時間*/
+    animation-iteration-count:infinite;/*重複次數:無限次*/
+    animation-direction:alternate;/*撥放完畢之後反向撥放*/
+}
+@keyframes Teki6{
+    0%{
+        left:419;
+    }
+    100%{
+        left:502px;
+    }
+}
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+.Teki7{
+    position:absolute;/*設定定位:不會被特別定位*/
+    left:502;/*設定圖片定位*/
+    top:50px;
+    animation-name:Teki7;/*動畫名稱*/
+    animation-duration:2s;/*動畫時間*/
+    animation-iteration-count:infinite;/*重複次數:無限次*/
+    animation-direction:alternate;/*撥放完畢之後反向撥放*/
+}
+@keyframes Teki7{
+    0%{
+        left:502;
+    }
+    100%{
+        left:585px;
+    }
+}
+/*-------------------------------------------------------------------------------------*/
