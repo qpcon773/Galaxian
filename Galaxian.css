@@ -1,6 +1,13 @@
 .Background{
-    background-image:url(Pic/6776.jpg);
+    margin-top:-10px;
+    margin-left:-10px;
     background-repeat: no-repeat;
+}
+
+#Bullet{
+    position:absolute;
+    width:28px;
+    height:28px;
 }
 
 #Main{

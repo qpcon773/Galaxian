@@ -8,8 +8,8 @@ setInterval(function Damege(){
     var MainJS=document.getElementById('Main');
     var MainX=MainJS.getBoundingClientRect().left;
     var MainY=MainJS.getBoundingClientRect().top;
-    Move(1);
-
+    Move();
+    Shooting();
 },100)
 
 };
@@ -35,6 +35,9 @@ switch(key.which){
     
     case 39:
         Set(39);
+    
+    case 32:
+        Shooting(32);
     break;
                 }
 }
@@ -94,7 +97,7 @@ function Set(KeyNumber){
 
 };
 
-function Move(No){
+function Move(){
     var MainJS=document.getElementById('Main');
     var MainX=MainJS.getBoundingClientRect().left;
     var MainY=MainJS.getBoundingClientRect().top;
@@ -345,7 +348,7 @@ function GameOver(){
     var GameOver=0
     var ExplosionGif=setInterval(function Explosion(){
         if (GameOver==1){
-            document.body.innerHTML="<img src='Pic/GameOver.png'></img>"
+            document.body.innerHTML="<img src='Pic/GameOver.png' class='Background'></img>"
             ClearInterval(ExplosionGif);
             
         }
@@ -354,4 +357,21 @@ function GameOver(){
         GameOver++;
                 },600)
 
+}
+
+function Shooting(PSwitch){
+    if (PSwitch==32){
+        document.getElementById('Bullet').style.backgroundImage="url('Pic/Bullet.png')";
+        var MainJS=document.getElementById('Main');
+        var BulletX=MainJS.getBoundingClientRect().left;
+        var BulletY=MainJS.getBoundingClientRect().top;
+        
+        BulletY-=28;
+        BulletX+=11;
+        document.getElementById('Bullet').style.top=BulletY;
+        document.getElementById('Bullet').style.left=BulletX;
+
+    }else{
+    
+    }
 }
