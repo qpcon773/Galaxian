@@ -4,10 +4,10 @@
     background-repeat: no-repeat;
 }
 
-#Bullet{
+.Menu{
+    margin-top:-10px;
+    Margin-left:-640px;
     position:absolute;
-    width:28px;
-    height:28px;
 }
 
 #Main{
@@ -280,3 +280,19 @@
     }
 }
 /*-------------------------------------------------------------------------------------*/
+#Bullet{
+    position:absolute;
+    width:28px;
+    height:28px;
+    animation-name:Bullet;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    animation-play-state:paused;
+}
+@keyframes Bullet{
+    0%{
+        
+    }
+    100%{
+    top:-508px;}
+}

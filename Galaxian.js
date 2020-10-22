@@ -35,7 +35,8 @@ switch(key.which){
     
     case 39:
         Set(39);
-    
+    break;
+
     case 32:
         Shooting(32);
     break;
@@ -359,19 +360,21 @@ function GameOver(){
 
 }
 
-function Shooting(PSwitch){
-    if (PSwitch==32){
+function Shooting(KeyNumber){
+    var PSwitch=1
+    if (KeyNumber==32){
+    if (PSwitch==1){
+        PSwitch=0
         document.getElementById('Bullet').style.backgroundImage="url('Pic/Bullet.png')";
         var MainJS=document.getElementById('Main');
         var BulletX=MainJS.getBoundingClientRect().left;
         var BulletY=MainJS.getBoundingClientRect().top;
-        
         BulletY-=28;
         BulletX+=11;
         document.getElementById('Bullet').style.top=BulletY;
         document.getElementById('Bullet').style.left=BulletX;
-
-    }else{
-    
+        document.getElementById('Bullet').style.animationPlayState='running'
+        var AnimationTime=setInterval(function BulletTime(){document.getElementById('Bullet').style.animationPlayState='paused';PSwitch=1},2000)
+    }else{}
     }
 }
