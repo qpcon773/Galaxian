@@ -361,10 +361,8 @@ function GameOver(){
 }
 
 function Shooting(KeyNumber){
-    var PSwitch=1
+    var Wating   
     if (KeyNumber==32){
-    if (PSwitch==1){
-        PSwitch=0
         document.getElementById('Bullet').style.backgroundImage="url('Pic/Bullet.png')";
         var MainJS=document.getElementById('Main');
         var BulletX=MainJS.getBoundingClientRect().left;
@@ -373,8 +371,23 @@ function Shooting(KeyNumber){
         BulletX+=11;
         document.getElementById('Bullet').style.top=BulletY;
         document.getElementById('Bullet').style.left=BulletX;
-        document.getElementById('Bullet').style.animationPlayState='running'
-        var AnimationTime=setInterval(function BulletTime(){document.getElementById('Bullet').style.animationPlayState='paused';PSwitch=1},2000)
-    }else{}
+        document.getElementById('Bullet').style.animationPlayState='running';
+
+        var AnimationTime=setInterval(
+            function BulletTime(){
+                if (Wating==1){
+                    wating=0
+                }
+
+                else{
+                document.getElementById('Bullet').style.animationPlayState='paused';
+                document.getElementById('Bullet').style.backgroundImage="";
+                Wating=1;}},2000)
+                
+        }
+
     }
-}
+
+    
+    
+
