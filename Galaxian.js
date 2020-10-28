@@ -10,6 +10,7 @@ setInterval(function Damege(){
     var MainY=MainJS.getBoundingClientRect().top;
     Move();
     Shooting();
+    KillTeki();
 },100)
 
 };
@@ -362,16 +363,28 @@ function GameOver(){
 
 function Shooting(KeyNumber){
     var Wating   
+    if (Wating==1){}else if (Wating==2){}
+    /*設下一個變數 代表射擊動作的階段
+    無→第一次開火
+    0→前面事件都跑完了 可以再一次開火了
+    1→開火跑完動畫後 停止循環事件
+    2→開火後開始跑動畫 這時無法再次開火
+    */
+    else{
     if (KeyNumber==32){
+        Wating=2
         document.getElementById('Bullet').style.backgroundImage="url('Pic/Bullet.png')";
         var MainJS=document.getElementById('Main');
         var BulletX=MainJS.getBoundingClientRect().left;
         var BulletY=MainJS.getBoundingClientRect().top;
         BulletY-=28;
         BulletX+=11;
+        /*這邊的話是把子彈的圖片調整到主角機體的砲火前面*/
         document.getElementById('Bullet').style.top=BulletY;
         document.getElementById('Bullet').style.left=BulletX;
         document.getElementById('Bullet').style.animationPlayState='running';
+        /*子彈跑的動畫原本是暫停的 這裏設計是按下開火的按鍵之後 動畫重新啟動 定位的話就是前面再調整的*/
+    
 
         var AnimationTime=setInterval(
             function BulletTime(){
@@ -379,15 +392,132 @@ function Shooting(KeyNumber){
                     wating=0
                 }
 
-                else{
+                else if (Wating==2){
                 document.getElementById('Bullet').style.animationPlayState='paused';
                 document.getElementById('Bullet').style.backgroundImage="";
                 Wating=1;}},2000)
                 
         }
-
+            }
     }
 
+    function KillTeki(){
+        var Bullet=document.getElementById('Bullet');
+        var BulletX=Bullet.getBoundingClientRect().left;
+        var BulletY=Bullet.getBoundingClientRect().top;
+        
+        var Teki=document.getElementById('Teki');
+        var TekiX=Teki.getBoundingClientRect().left;
+        var TekiY=Teki.getBoundingClientRect().top;
+    
+        var Teki2=document.getElementById('Teki2');
+        var Teki2X=Teki2.getBoundingClientRect().left;
+        var Teki2Y=Teki2.getBoundingClientRect().top;
+    
+        var Teki3=document.getElementById('Teki3');
+        var Teki3X=Teki3.getBoundingClientRect().left;
+        var Teki3Y=Teki3.getBoundingClientRect().top;
+    
+        var Teki4=document.getElementById('Teki4');
+        var Teki4X=Teki4.getBoundingClientRect().left;
+        var Teki4Y=Teki4.getBoundingClientRect().top;
+    
+        var Teki5=document.getElementById('Teki5');
+        var Teki5X=Teki5.getBoundingClientRect().left;
+        var Teki5Y=Teki5.getBoundingClientRect().top;
+    
+        var Teki6=document.getElementById('Teki6');
+        var Teki6X=Teki6.getBoundingClientRect().left;
+        var Teki6Y=Teki6.getBoundingClientRect().top;
+    
+        var Teki7=document.getElementById('Teki7');
+        var Teki7X=Teki7.getBoundingClientRect().left;
+        var Teki7Y=Teki7.getBoundingClientRect().top;
+    
+        var Teki8=document.getElementById('Teki8');
+        var Teki8X=Teki8.getBoundingClientRect().left;
+        var Teki8Y=Teki8.getBoundingClientRect().top;
+    
+        var Teki9=document.getElementById('Teki9');
+        var Teki9X=Teki9.getBoundingClientRect().left;
+        var Teki9Y=Teki9.getBoundingClientRect().top;
+    
+        var Teki10=document.getElementById('Teki10');
+        var Teki10X=Teki10.getBoundingClientRect().left;
+        var Teki10Y=Teki10.getBoundingClientRect().top;
+    
+        var Teki11=document.getElementById('Teki11');
+        var Teki11X=Teki11.getBoundingClientRect().left;
+        var Teki11Y=Teki11.getBoundingClientRect().top;
+    
+        var Teki12=document.getElementById('Teki12');
+        var Teki12X=Teki12.getBoundingClientRect().left;
+        var Teki12Y=Teki12.getBoundingClientRect().top;
+    
+        var Teki13=document.getElementById('Teki13');
+        var Teki13X=Teki13.getBoundingClientRect().left;
+        var Teki13Y=Teki13.getBoundingClientRect().top;
+    
+        var Teki14=document.getElementById('Teki14');
+        var Teki14X=Teki14.getBoundingClientRect().left;
+        var Teki14Y=Teki14.getBoundingClientRect().top;
+    
+        var BulletDamegiY=Math.abs(BulletY-TekiY);
+        var BulletDamegiX=Math.abs(BulletX-TekiX);
+       
+        var BulletDamegi2Y=Math.abs(BulletY-Teki2Y);
+        var BulletDamegi2X=Math.abs(BulletX-Teki2X);
+        
+        var BulletDamegi3Y=Math.abs(BulletY-Teki3Y);
+        var BulletDamegi3X=Math.abs(BulletX-Teki3X);
+        
+        var BulletDamegi4Y=Math.abs(BulletY-Teki4Y);
+        var BulletDamegi4X=Math.abs(BulletX-Teki4X);
+       
+        var BulletDamegi5Y=Math.abs(BulletY-Teki5Y);
+        var BulletDamegi5X=Math.abs(BulletX-Teki5X);
+        
+        var BulletDamegi6Y=Math.abs(BulletY-Teki6Y);
+        var BulletDamegi6X=Math.abs(BulletX-Teki6X);
+        
+        var BulletDamegi7Y=Math.abs(BulletY-Teki7Y);
+        var BulletDamegi7X=Math.abs(BulletX-Teki7X);
+       
+        var BulletDamegi8Y=Math.abs(BulletY-Teki8Y);
+        var BulletDamegi8X=Math.abs(BulletX-Teki8X);
+        
+        var BulletDamegi9Y=Math.abs(BulletY-Teki9Y);
+        var BulletDamegi9X=Math.abs(BulletX-Teki9X);
+        
+        var BulletDamegi10Y=Math.abs(BulletY-Teki10Y);
+        var BulletDamegi10X=Math.abs(Bullet-Teki10X);
+        
+        var BulletDamegi11Y=Math.abs(BulletY-Teki11Y);
+        var BulletDamegi11X=Math.abs(BulletX-Teki11X);
+        
+        var BulletDamegi12Y=Math.abs(BulletY-Teki12Y);
+        var BulletDamegi12X=Math.abs(BulletX-Teki12X);
+        
+        var BulletDamegi13Y=Math.abs(BulletY-Teki13Y);
+        var BulletDamegi13X=Math.abs(BulletX-Teki13X);
+        
+        var BulletDamegi14Y=Math.abs(BulletY-Teki14Y);
+        var BulletDamegi14X=Math.abs(BulletX-Teki14X);
+    
+    
+        if(BulletDamegiY>=0){
+            if(BulletDamegiY<=25){
+                if(BulletDamegiX>=0){
+                    if(BulletDamegiX<=25){
+                        GameOver();
+                    }
+                }
+            }
+        }
+        
+
+    
+    }
     
     
 
