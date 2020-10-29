@@ -402,6 +402,22 @@ function Shooting(KeyNumber){
     }
 
     function KillTeki(){
+        var Point
+        var TekiAlive
+        var Teki2Alive
+        var Teki3Alive
+        var Teki4Alive
+        var Teki5Alive
+        var Teki6Alive
+        var Teki7Alive
+        var Teki8Alive
+        var Teki9Alive
+        var Teki10Alive
+        var Teki11Alive
+        var Teki12Alive
+        var Teki13Alive
+        var Teki14Alive
+        
         var Bullet=document.getElementById('Bullet');
         var BulletX=Bullet.getBoundingClientRect().left;
         var BulletY=Bullet.getBoundingClientRect().top;
@@ -490,7 +506,7 @@ function Shooting(KeyNumber){
         var BulletDamegi9X=Math.abs(BulletX-Teki9X);
         
         var BulletDamegi10Y=Math.abs(BulletY-Teki10Y);
-        var BulletDamegi10X=Math.abs(Bullet-Teki10X);
+        var BulletDamegi10X=Math.abs(BulletX-Teki10X);
         
         var BulletDamegi11Y=Math.abs(BulletY-Teki11Y);
         var BulletDamegi11X=Math.abs(BulletX-Teki11X);
@@ -505,19 +521,206 @@ function Shooting(KeyNumber){
         var BulletDamegi14X=Math.abs(BulletX-Teki14X);
     
     
+    if (TekiAlive<=1)   
+    {
         if(BulletDamegiY>=0){
-            if(BulletDamegiY<=25){
-                if(BulletDamegiX>=0){
-                    if(BulletDamegiX<=25){
-                        GameOver();
-                    }
+        if(BulletDamegiY<=30){
+            if(BulletDamegiX>=0){
+                if(BulletDamegiX<=30){
+                    Point+10000000;
+                    TekiAlive++;
+                    TekiDead(1);
+
                 }
             }
         }
-        
-
-    
+    }}
     }
-    
+
+    function TekiDead(TekiNumber){
+        if (TekiNumber==1){
+            document.getElementById('Teki').src='Pic/Explosion.gif';
+            var TekiDeadGif=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead>=1){
+                    
+                }
+                document.getElementById('Teki').src='Pic/Non.png';
+        
+                TekiDeadGif++;
+                        },600)
+        }
+
+        if (TekiNumber==2){
+            document.getElementById('Teki2').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki2').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+        if (TekiNumber==3){
+            document.getElementById('Teki3').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki3').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+        if (TekiNumber==4){
+            document.getElementById('Teki4').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki4').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+        if (TekiNumber==5){
+            document.getElementById('Teki5').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki5').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+        if (TekiNumber==6){
+            document.getElementById('Teki6').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki6').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+        if (TekiNumber==7){
+            document.getElementById('Teki7').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki7').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+        if (TekiNumber==8){
+            document.getElementById('Teki8').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki8').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+        if (TekiNumber==9){
+            document.getElementById('Teki9').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki9').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+        if (TekiNumber==10){
+            document.getElementById('Teki10').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki10').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+        if (TekiNumber==11){
+            document.getElementById('Teki11').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki11').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+        if (TekiNumber==12){
+            document.getElementById('Teki12').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki12').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+        if (TekiNumber==13){
+            document.getElementById('Teki13').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki13').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+        if (TekiNumber==14){
+            document.getElementById('Teki14').src='Pic/Explosion.gif';
+            var TekiDead=0
+            setInterval(function TekiExplosion(){
+                if (TekiDead==1){
+                    
+                }
+                document.getElementById('Teki14').src='Pic/Non.png';
+        
+                TekiDead++;
+                        },600)
+        }
+
+    }
+
     
 
