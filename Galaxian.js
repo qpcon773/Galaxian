@@ -1,25 +1,46 @@
+var GameMode
+var Voice
+
+var BGM=document.createElement('audio');
+BGM.src="BGM/Start.mp3";
+BGM.loop=true;
+
+var BGM02=document.createElement('audio');
+BGM02.src='BGM/GameOver.mp3';
+
+
 /*為了方便底下的運算
   主角機體的原始座標就設定在這裏*/
-window.onload=function Start(){
+
+  window.onload=function Start(){
     Main.style.top=215;
     Main.style.left=295;
     
+    
 setInterval(function Damege(){
+    if (GameMode==1){}
+    else{
     var MainJS=document.getElementById('Main');
     var MainX=MainJS.getBoundingClientRect().left;
     var MainY=MainJS.getBoundingClientRect().top;
+    
     Move();
     Shooting();
     KillTeki();
+    }
+
 },100)
 
 };
+
 
 document.onkeydown=function(key){
 
 /*這邊先用事件抓按鍵
   然後用switch的指令去針對不同的按鍵會跳到"function Set" 指定的內容中*/
 
+if (GameMode==1){}
+else{
 switch(key.which){
         
     case 38:
@@ -43,8 +64,15 @@ switch(key.which){
     break;
                 }
 }
+}
 
 function Set(KeyNumber){
+    if (Voice==1){}
+    else{
+        BGMSwitch(1);
+        Voice=1;
+    }
+    
     var speed=20;
     var MainJS = document.getElementById('Main');
     var MainX=MainJS.getBoundingClientRect().left;
@@ -350,14 +378,17 @@ function GameOver(){
     var GameOver=0
     var ExplosionGif=setInterval(function Explosion(){
         if (GameOver==1){
-            document.body.innerHTML="<img src='Pic/GameOver.png' class='Background'></img>"
-            ClearInterval(ExplosionGif);
+            BGMSwitch(2);
+            BGMSwitch(3);
+
+           document.body.innerHTML="<img src='Pic/GameOver.png' class='Background' onclick='Reset();'></img>"
+            
             
         }
-        document.getElementById('Main').style.backgroundImage="url('Pic/Non.png')";
-
+                
+        GameMode=1;
         GameOver++;
-                },600)
+                },300)
 
 }
 
@@ -724,3 +755,13 @@ function Shooting(KeyNumber){
 
     
 
+function BGMSwitch(MusicNumber){
+    if (MusicNumber==1){BGM.play();};
+    if (MusicNumber==2){BGM.pause();};
+    if (MusicNumber==3){BGM02.play();};
+            
+}
+
+function Reset(){
+    window.location.reload('');
+}
