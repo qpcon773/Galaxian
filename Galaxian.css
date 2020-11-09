@@ -10,6 +10,12 @@
     position:absolute;
 }
 
+#CSSPoint{
+    margin-top:-8px;
+    margin-left:-640px;
+    position:absolute;
+}
+
 #Main{
     position:absolute;
     background-image:url('PIC/Main.png');

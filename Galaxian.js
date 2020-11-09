@@ -1,5 +1,22 @@
+/*這裡先放置一些全域用的變數 遊戲狀態 音樂音效 分數 敵人狀態*/
 var GameMode
 var Voice
+var Point=0
+
+var TekiAlive
+var Teki2Alive
+var Teki3Alive
+var Teki4Alive
+var Teki5Alive
+var Teki6Alive
+var Teki7Alive
+var Teki8Alive
+var Teki9Alive
+var Teki10Alive
+var Teki11Alive
+var Teki12Alive
+var Teki13Alive
+var Teki14Alive
 
 var BGM=document.createElement('audio');
 BGM.src="BGM/Start.mp3";
@@ -27,6 +44,7 @@ setInterval(function Damege(){
     Move();
     Shooting();
     KillTeki();
+    Menu();
     }
 
 },100)
@@ -433,22 +451,7 @@ function Shooting(KeyNumber){
     }
 
     function KillTeki(){
-        var Point
-        var TekiAlive
-        var Teki2Alive
-        var Teki3Alive
-        var Teki4Alive
-        var Teki5Alive
-        var Teki6Alive
-        var Teki7Alive
-        var Teki8Alive
-        var Teki9Alive
-        var Teki10Alive
-        var Teki11Alive
-        var Teki12Alive
-        var Teki13Alive
-        var Teki14Alive
-        
+       
         var Bullet=document.getElementById('Bullet');
         var BulletX=Bullet.getBoundingClientRect().left;
         var BulletY=Bullet.getBoundingClientRect().top;
@@ -552,14 +555,14 @@ function Shooting(KeyNumber){
         var BulletDamegi14X=Math.abs(BulletX-Teki14X);
     
     
-    if (TekiAlive<=1)   
-    {
+    if (TekiAlive==1){}
+    else{
         if(BulletDamegiY>=0){
         if(BulletDamegiY<=30){
             if(BulletDamegiX>=0){
                 if(BulletDamegiX<=30){
-                    Point+10000000;
-                    TekiAlive++;
+                    Point++;
+                    TekiAlive=1;
                     TekiDead(1);
 
                 }
@@ -573,7 +576,7 @@ function Shooting(KeyNumber){
             document.getElementById('Teki').src='Pic/Explosion.gif';
             var TekiDeadGif=0
             setInterval(function TekiExplosion(){
-                if (TekiDead>=1){
+                if (TekiDeadGif>=1){
                     
                 }
                 document.getElementById('Teki').src='Pic/Non.png';
@@ -765,3 +768,63 @@ function BGMSwitch(MusicNumber){
 function Reset(){
     window.location.reload('');
 }
+
+function Menu(){
+    console.log(Point);
+    if (Point==1){
+        document.getElementById('CSSPoint').src='PIC/1.png';
+    }
+    
+    if (Point==2){
+        document.getElementById('CSSPoint').src='PIC/2.png';
+    }
+
+    if (Point==3){
+        document.getElementById('CSSPoint').src='PIC/3.png';
+    }
+
+    if (Point==4){
+        document.getElementById('CSSPoint').src='PIC/4.png';
+    }
+    if (Point==5){
+        document.getElementById('CSSPoint').src='PIC/5.png';
+    }
+    if (Point==6){
+            document.getElementById('CSSPoint').src='PIC/6.png';
+    }
+
+    if (Point==7){
+            document.getElementById('CSSPoint').src='PIC/7.png';
+    }
+
+    if (Point==8){
+            document.getElementById('CSSPoint').src='PIC/8.png';
+    }
+
+    if (Point==9){
+            document.getElementById('CSSPoint').src='PIC/9.png';
+    }
+
+    if (Point==10){
+            document.getElementById('CSSPoint').src='PIC/10.png';
+    }
+
+    if (Point==11){
+            document.getElementById('CSSPoint').src='PIC/11.png';
+    }
+
+    if (Point==12){
+            document.getElementById('CSSPoint').src='PIC/12.png';
+    }
+
+    if (Point==13){
+            document.getElementById('CSSPoint').src='PIC/13.png';
+    }
+
+     if (Point>=14){
+            document.getElementById('CSSPoint').src='PIC/14.png';
+    }                                  
+                                                                                                                                                                                                                                        
+
+}
+
