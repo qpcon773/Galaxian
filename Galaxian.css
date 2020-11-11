@@ -4,6 +4,22 @@
     background-repeat: no-repeat;
 }
 
+.GameOverButton{
+   width:201px;
+   height:63px;
+   background-image:url('Pic/D-Reset.png');
+   position:absolute; 
+   margin-left:-425px;
+   margin-top:320px;
+}
+
+.GameOverButton:hover{
+    width:201px;
+    height:63px;
+    background-image:url('Pic/L-Reset.png');
+}
+
+
 .Menu{
     margin-top:-10px;
     Margin-left:-640px;

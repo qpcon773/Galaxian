@@ -399,7 +399,8 @@ function GameOver(){
             BGMSwitch(2);
             BGMSwitch(3);
 
-           document.body.innerHTML="<img src='Pic/GameOver.png' class='Background' onclick='Reset();'></img>"
+           document.body.innerHTML="<img src='Pic/GameOver.png' class='Background'</img>\
+           <span class='GameOverButton' onclick='Reset();'></span>"
             
             
         }
