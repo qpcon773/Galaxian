@@ -1,4 +1,4 @@
-/*這裡先放置一些全域用的變數 遊戲狀態 音樂音效 分數 敵人狀態*/
+/*這裡先放置一些全域用的變數 遊戲狀態 音樂音效 分數 敵人狀態 子彈動畫*/
 var GameMode
 var Voice
 var Point=0
@@ -17,6 +17,8 @@ var Teki11Alive
 var Teki12Alive
 var Teki13Alive
 var Teki14Alive
+
+var AnimeTime
 
 var BGM=document.createElement('audio');
 BGM.src="BGM/Start.mp3";
@@ -432,24 +434,28 @@ function Shooting(KeyNumber){
         /*這邊的話是把子彈的圖片調整到主角機體的砲火前面*/
         document.getElementById('Bullet').style.top=BulletY;
         document.getElementById('Bullet').style.left=BulletX;
-        document.getElementById('Bullet').style.animationPlayState='running';
+             //document.getElementById('Bullet').style.animationPlayState='running';
         /*子彈跑的動畫原本是暫停的 這裏設計是按下開火的按鍵之後 動畫重新啟動 定位的話就是前面再調整的*/
     
-
-        var AnimationTime=setInterval(
+        setInterval(
             function BulletTime(){
-                if (Wating==1){
-                    wating=0
-                }
-
-                else if (Wating==2){
-                document.getElementById('Bullet').style.animationPlayState='paused';
-                document.getElementById('Bullet').style.backgroundImage="";
-                Wating=1;}},2000)
+                {
+            if (AnimeTime>=640){
+                Wating==0;
+            }
+            else{
+                BulletY-=20;
+                Bullet.style.top=BulletY;
+                AnimeTime+=20;
+            }
+                                   
+                ;}},30)
                 
         }
-            }
     }
+}
+            
+    
 
     function KillTeki(){
        
@@ -570,7 +576,7 @@ function Shooting(KeyNumber){
             }
         }
     }}
-    }
+}
 
     function TekiDead(TekiNumber){
         if (TekiNumber==1){
@@ -771,7 +777,7 @@ function Reset(){
 }
 
 function Menu(){
-    console.log(Point);
+    
     if (Point==1){
         document.getElementById('CSSPoint').src='PIC/1.png';
     }
@@ -825,7 +831,5 @@ function Menu(){
      if (Point>=14){
             document.getElementById('CSSPoint').src='PIC/14.png';
     }                                  
-                                                                                                                                                                                                                                        
-
-}
+}                                                                                                                                                                                                                                   
 
