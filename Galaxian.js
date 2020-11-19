@@ -1,7 +1,10 @@
-/*這裡先放置一些全域用的變數 遊戲狀態 音樂音效 分數 敵人狀態 子彈動畫*/
+/*這裡先放置一些全域用的變數 遊戲狀態 音樂音效 分數 子彈填裝狀態 敵人狀態 子彈動畫*/
 var GameMode
 var Voice
 var Point=0
+var Wating=0
+
+
 
 var TekiAlive
 var Teki2Alive
@@ -18,14 +21,23 @@ var Teki12Alive
 var Teki13Alive
 var Teki14Alive
 
-var AnimeTime
+var AnimeTime=0
 
-var BGM=document.createElement('audio');
-BGM.src="BGM/Start.mp3";
-BGM.loop=true;
+var BGM01=document.createElement('audio');
+BGM01.src="BGM/Start.mp3";
+BGM01.loop=true;
 
 var BGM02=document.createElement('audio');
 BGM02.src='BGM/GameOver.mp3';
+
+var BGM03=document.createElement('audio');
+//BGM03.src='BGM/GameOver.mp3';
+
+var SE01=document.createElement('audio');
+SE01.src='SE/Shoot.wav';
+
+var SE02=document.createElement('audio');
+SE02.src='SE/Explosion.wav';
 
 
 /*為了方便底下的運算
@@ -394,6 +406,7 @@ function Move(){
 }
 
 function GameOver(){
+    SESwitch(2);
     document.getElementById('Main').style.backgroundImage="url('Pic/Explosion.gif')";
     var GameOver=0
     var ExplosionGif=setInterval(function Explosion(){
@@ -413,18 +426,21 @@ function GameOver(){
 
 }
 
+
 function Shooting(KeyNumber){
-    var Wating   
-    if (Wating==1){}else if (Wating==2){}
+
+    if (Wating==1){}
     /*設下一個變數 代表射擊動作的階段
     無→第一次開火
     0→前面事件都跑完了 可以再一次開火了
     1→開火跑完動畫後 停止循環事件
     2→開火後開始跑動畫 這時無法再次開火
     */
-    else{
+    else if (Wating==0){
+
     if (KeyNumber==32){
-        Wating=2
+        SESwitch(1);
+        Wating=1
         document.getElementById('Bullet').style.backgroundImage="url('Pic/Bullet.png')";
         var MainJS=document.getElementById('Main');
         var BulletX=MainJS.getBoundingClientRect().left;
@@ -434,24 +450,23 @@ function Shooting(KeyNumber){
         /*這邊的話是把子彈的圖片調整到主角機體的砲火前面*/
         document.getElementById('Bullet').style.top=BulletY;
         document.getElementById('Bullet').style.left=BulletX;
-             //document.getElementById('Bullet').style.animationPlayState='running';
         /*子彈跑的動畫原本是暫停的 這裏設計是按下開火的按鍵之後 動畫重新啟動 定位的話就是前面再調整的*/
     
-        setInterval(
+       var BulletAnime=window.setInterval(
             function BulletTime(){
-                {
-            if (AnimeTime>=640){
-                Wating==0;
-            }
-            else{
+                if (AnimeTime>=640){
+                      
+                    window.clearInterval(BulletAnime);
+                    Wating=0;
+                    AnimeTime=0;
+                             
+                }
+
+                else{
                 BulletY-=20;
                 Bullet.style.top=BulletY;
-                AnimeTime+=20;
-            }
-                                   
-                ;}},30)
-                
-        }
+                AnimeTime+=20;                 
+                ;}},30)}
     }
 }
             
@@ -580,6 +595,7 @@ function Shooting(KeyNumber){
 
     function TekiDead(TekiNumber){
         if (TekiNumber==1){
+            SESwitch(2);
             document.getElementById('Teki').src='Pic/Explosion.gif';
             var TekiDeadGif=0
             setInterval(function TekiExplosion(){
@@ -766,10 +782,15 @@ function Shooting(KeyNumber){
     
 
 function BGMSwitch(MusicNumber){
-    if (MusicNumber==1){BGM.play();};
-    if (MusicNumber==2){BGM.pause();};
+    if (MusicNumber==1){BGM01.play();};
+    if (MusicNumber==2){BGM01.pause();};
     if (MusicNumber==3){BGM02.play();};
             
+}
+
+function SESwitch(SENumber){
+    if (SENumber==1){SE01.play();};
+    if (SENumber==2){SE02.play();};
 }
 
 function Reset(){
