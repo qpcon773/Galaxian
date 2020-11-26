@@ -4,8 +4,6 @@ var Voice
 var Point=0
 var Wating=0
 
-
-
 var TekiAlive
 var Teki2Alive
 var Teki3Alive
@@ -20,6 +18,8 @@ var Teki11Alive
 var Teki12Alive
 var Teki13Alive
 var Teki14Alive
+var OnlyOne
+
 
 var AnimeTime=0
 
@@ -159,7 +159,7 @@ function Set(KeyNumber){
 
 };
 
-function Move(){
+function Move(Test){
     var MainJS=document.getElementById('Main');
     var MainX=MainJS.getBoundingClientRect().left;
     var MainY=MainJS.getBoundingClientRect().top;
@@ -403,6 +403,28 @@ function Move(){
         }
     }    
 /* 傷害判定的式子 先抓出主角和怪物的座標 然後利用加法求正數的方法算出距離加以判定 */
+
+if (Test==123){
+
+    if (TekiAlive==1){console.log ('123');  }
+   else{
+    var Speed=TekiY
+    document.getElementById('Teki').style.animationPlayState='paused';
+    var Tekimove=window.setInterval(
+        function TekiM(){
+            
+            Speed+=10;
+            Teki.style.top=Speed;
+            console.log(Teki.style.top);
+            ;
+        }
+    ,40);
+    }
+
+}
+
+
+
 }
 
 function GameOver(){
@@ -579,18 +601,258 @@ function Shooting(KeyNumber){
     
     if (TekiAlive==1){}
     else{
+        if (OnlyOne==1){}
+        else{
         if(BulletDamegiY>=0){
         if(BulletDamegiY<=30){
             if(BulletDamegiX>=0){
                 if(BulletDamegiX<=30){
                     Point++;
                     TekiAlive=1;
+                    OnlyOne=1;
                     TekiDead(1);
 
                 }
             }
         }
-    }}
+    }}}
+
+    
+    if (Teki2Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi2Y>=0){
+        if(BulletDamegi2Y<=30){
+            if(BulletDamegi2X>=0){
+                if(BulletDamegi2X<=30){
+                    Point++;
+                    Teki2Alive=1;
+                    OnlyOne=1;
+                    TekiDead(2);
+
+                }
+            }
+        }
+    }}}
+    
+    if (Teki3Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi3Y>=0){
+        if(BulletDamegi3Y<=30){
+            if(BulletDamegi3X>=0){
+                if(BulletDamegi3X<=30){
+                    Point++;
+                    Teki3Alive=1;
+                    OnlyOne=1;
+                    TekiDead(3);
+
+                }
+            }
+        }
+    }}}
+    
+    if (Teki4Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi4Y>=0){
+        if(BulletDamegi4Y<=30){
+            if(BulletDamegi4X>=0){
+                if(BulletDamegi4X<=30){
+                    Point++;
+                    Teki4Alive=1;
+                    OnlyOne=1;
+                    TekiDead(4);
+
+                }
+            }
+        }
+    }}}
+    
+    if (Teki5Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi5Y>=0){
+        if(BulletDamegi5Y<=30){
+            if(BulletDamegi5X>=0){
+                if(BulletDamegi5X<=30){
+                    Point++;
+                    Teki5Alive=1;
+                    OnlyOne=1;
+                    TekiDead(5);
+
+                }
+            }
+        }
+    }}}
+    
+    if (Teki6Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi6Y>=0){
+        if(BulletDamegi6Y<=30){
+            if(BulletDamegi6X>=0){
+                if(BulletDamegi6X<=30){
+                    Point++;
+                    Teki6Alive=1;
+                    OnlyOne=1;
+                    TekiDead(6);
+
+                }
+            }
+        }
+    }}}
+
+    if (Teki7Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi7Y>=0){
+        if(BulletDamegi7Y<=30){
+            if(BulletDamegi7X>=0){
+                if(BulletDamegi7X<=30){
+                    Point++;
+                    Teki7Alive=1;
+                    OnlyOne=1;
+                    TekiDead(7);
+
+                }
+            }
+        }
+    }}}
+
+    if (Teki8Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi8Y>=0){
+        if(BulletDamegi8Y<=30){
+            if(BulletDamegi8X>=0){
+                if(BulletDamegi8X<=30){
+                    Point++;
+                    Teki8Alive=1;
+                    OnlyOne=1;
+                    TekiDead(8);
+
+                }
+            }
+        }
+    }}}
+    
+    if (Teki9Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi9Y>=0){
+        if(BulletDamegi9Y<=30){
+            if(BulletDamegi9X>=0){
+                if(BulletDamegi9X<=30){
+                    Point++;
+                    Teki9Alive=1;
+                    OnlyOne=1;
+                    TekiDead(9);
+
+                }
+            }
+        }
+    }}}
+    
+    if (Teki10Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi10Y>=0){
+        if(BulletDamegi10Y<=30){
+            if(BulletDamegi10X>=0){
+                if(BulletDamegi10X<=30){
+                    Point++;
+                    Teki10Alive=1;
+                    OnlyOne=1;
+                    TekiDead(10);
+
+                }
+            }
+        }
+    }}}
+    
+    if (Teki11Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi11Y>=0){
+        if(BulletDamegi11Y<=30){
+            if(BulletDamegi11X>=0){
+                if(BulletDamegi11X<=30){
+                    Point++;
+                    Teki11Alive=1;
+                    OnlyOne=1;
+                    TekiDead(11);
+
+                }
+            }
+        }
+    }}}
+    
+    if (Teki12Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi12Y>=0){
+        if(BulletDamegi12Y<=30){
+            if(BulletDamegi12X>=0){
+                if(BulletDamegi12X<=30){
+                    Point++;
+                    Teki12Alive=1;
+                    OnlyOne=1;
+                    TekiDead(12);
+
+                }
+            }
+        }
+    }}}
+    
+    if (Teki13Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi13Y>=0){
+        if(BulletDamegi13Y<=30){
+            if(BulletDamegi13X>=0){
+                if(BulletDamegi13X<=30){
+                    Point++;
+                    Teki13Alive=1;
+                    OnlyOne=1;
+                    TekiDead(13);
+
+                }
+            }
+        }
+    }}}
+    
+    if (Teki14Alive==1){}
+    else{
+        if (OnlyOne==1){}
+        else{
+        if(BulletDamegi14Y>=0){
+        if(BulletDamegi14Y<=30){
+            if(BulletDamegi14X>=0){
+                if(BulletDamegi14X<=30){
+                    Point++;
+                    Teki14Alive=1;
+                    OnlyOne=1;
+                    TekiDead(14);
+
+                }
+            }
+        }
+    }}}
+
+
 }
 
     function TekiDead(TekiNumber){
@@ -603,7 +865,7 @@ function Shooting(KeyNumber){
                     
                 }
                 document.getElementById('Teki').src='Pic/Non.png';
-        
+                OnlyOne=0;       
                 TekiDeadGif++;
                         },600)
         }
@@ -616,163 +878,175 @@ function Shooting(KeyNumber){
                     
                 }
                 document.getElementById('Teki2').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
 
         if (TekiNumber==3){
             document.getElementById('Teki3').src='Pic/Explosion.gif';
+            SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
                     
                 }
                 document.getElementById('Teki3').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
 
         if (TekiNumber==4){
             document.getElementById('Teki4').src='Pic/Explosion.gif';
+            SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
                     
                 }
                 document.getElementById('Teki4').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
 
         if (TekiNumber==5){
             document.getElementById('Teki5').src='Pic/Explosion.gif';
+            SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
                     
                 }
                 document.getElementById('Teki5').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
 
         if (TekiNumber==6){
             document.getElementById('Teki6').src='Pic/Explosion.gif';
+            SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
                     
                 }
                 document.getElementById('Teki6').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
 
         if (TekiNumber==7){
             document.getElementById('Teki7').src='Pic/Explosion.gif';
+            SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
                     
                 }
                 document.getElementById('Teki7').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
 
         if (TekiNumber==8){
             document.getElementById('Teki8').src='Pic/Explosion.gif';
+            SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
                     
                 }
                 document.getElementById('Teki8').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
 
         if (TekiNumber==9){
             document.getElementById('Teki9').src='Pic/Explosion.gif';
+            SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
                     
                 }
                 document.getElementById('Teki9').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
 
         if (TekiNumber==10){
             document.getElementById('Teki10').src='Pic/Explosion.gif';
+            SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
                     
                 }
                 document.getElementById('Teki10').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
 
         if (TekiNumber==11){
             document.getElementById('Teki11').src='Pic/Explosion.gif';
+            SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
                     
                 }
                 document.getElementById('Teki11').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
 
         if (TekiNumber==12){
             document.getElementById('Teki12').src='Pic/Explosion.gif';
+            SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
                     
                 }
                 document.getElementById('Teki12').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
 
         if (TekiNumber==13){
             document.getElementById('Teki13').src='Pic/Explosion.gif';
+            SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
                     
                 }
                 document.getElementById('Teki13').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
 
         if (TekiNumber==14){
             document.getElementById('Teki14').src='Pic/Explosion.gif';
+            SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
                     
                 }
                 document.getElementById('Teki14').src='Pic/Non.png';
-        
+                OnlyOne=0;
                 TekiDead++;
                         },600)
         }
@@ -853,4 +1127,3 @@ function Menu(){
             document.getElementById('CSSPoint').src='PIC/14.png';
     }                                  
 }                                                                                                                                                                                                                                   
-
