@@ -404,27 +404,6 @@ function Move(Test){
     }    
 /* 傷害判定的式子 先抓出主角和怪物的座標 然後利用加法求正數的方法算出距離加以判定 */
 
-if (Test==123){
-
-    if (TekiAlive==1){console.log ('123');  }
-   else{
-    var Speed=TekiY
-    document.getElementById('Teki').style.animationPlayState='paused';
-    var Tekimove=window.setInterval(
-        function TekiM(){
-            
-            Speed+=10;
-            Teki.style.top=Speed;
-            console.log(Teki.style.top);
-            ;
-        }
-    ,40);
-    }
-
-}
-
-
-
 }
 
 function GameOver(){
@@ -1125,5 +1104,245 @@ function Menu(){
 
      if (Point>=14){
             document.getElementById('CSSPoint').src='PIC/14.png';
-    }                                  
-}                                                                                                                                                                                                                                   
+    }                                                                                                                                                                                                                                                                    
+}
+
+
+function Change(Test){
+    if (Test==123){
+        var Teki=document.getElementById('Teki');
+        var TekiY=Teki.getBoundingClientRect().top;
+    
+        var Teki2=document.getElementById('Teki2');
+        var Teki2Y=Teki2.getBoundingClientRect().top;
+    
+        var Teki3=document.getElementById('Teki3');
+        var Teki3Y=Teki3.getBoundingClientRect().top;
+    
+        var Teki4=document.getElementById('Teki4');
+        var Teki4Y=Teki4.getBoundingClientRect().top;
+    
+        var Teki5=document.getElementById('Teki5');
+        var Teki5Y=Teki5.getBoundingClientRect().top;
+    
+        var Teki6=document.getElementById('Teki6');
+        var Teki6Y=Teki6.getBoundingClientRect().top;
+    
+        var Teki7=document.getElementById('Teki7');
+        var Teki7Y=Teki7.getBoundingClientRect().top;
+    
+        var Teki8=document.getElementById('Teki8');
+        var Teki8Y=Teki8.getBoundingClientRect().top;
+    
+        var Teki9=document.getElementById('Teki9');
+        var Teki9Y=Teki9.getBoundingClientRect().top;
+    
+        var Teki10=document.getElementById('Teki10');
+        var Teki10Y=Teki10.getBoundingClientRect().top;
+    
+        var Teki11=document.getElementById('Teki11');
+        var Teki11Y=Teki11.getBoundingClientRect().top;
+    
+        var Teki12=document.getElementById('Teki12');
+        var Teki12Y=Teki12.getBoundingClientRect().top;
+    
+        var Teki13=document.getElementById('Teki13');
+        var Teki13Y=Teki13.getBoundingClientRect().top;
+    
+        var Teki14=document.getElementById('Teki14');
+        var Teki14Y=Teki14.getBoundingClientRect().top;
+
+        if (TekiAlive==1){}
+       else{
+        var Speed=TekiY
+        var Action
+        window.setInterval(
+            function TekiM(){
+                
+                if (Action==0){
+                    if (Speed<=50){Action=1;}
+                    else{
+                    Speed-=60;
+                    Teki.style.top=Speed;
+                    }
+                 }
+    
+    
+                else{
+                
+                if(Speed>=400){Action=0;}
+                else{
+                Speed+=60;
+                Teki.style.top=Speed;
+                    }
+                }
+            }
+        ,1500);
+        }
+    
+        if (Teki2Alive==1){}
+        else{
+         var Speed2=Teki2Y
+         var Action2
+         window.setInterval(
+             function TekiM2(){
+                 if (Action2==0){
+                     if (Speed2<=50){Action2=1;}
+                     else{
+                     Speed2-=70;
+                     Teki2.style.top=Speed2;
+                     }
+                  }
+     
+     
+                 else{
+                 
+                 if(Speed2>=400){Action2=0;}
+                 else{
+                 Speed2+=70;
+                 Teki2.style.top=Speed2;
+                     }
+                 }
+             }
+         ,1500);
+         }
+    
+         if (Teki3Alive==1){}
+         else{
+          var Speed3=Teki3Y
+          var Action3
+          window.setInterval(
+              function TekiM3(){
+                  if (Action3==0){
+                      if (Speed3<=50){Action3=1;}
+                      else{
+                      Speed3-=62;
+                      Teki3.style.top=Speed3;
+                      }
+                   }
+      
+      
+                  else{
+                  
+                  if(Speed3>=400){Action3=0;}
+                  else{
+                  Speed3+=62;
+                  Teki3.style.top=Speed3;
+                      }
+                  }
+              }
+          ,1500);
+          }
+    
+          if (Teki4Alive==1){}
+          else{
+            var Speed4=Teki4Y
+           var Action4
+           window.setInterval(
+               function TekiM4(){
+                   if (Action4==0){
+                       if (Speed4<=50){Action4=1;}
+                       else{
+                       Speed4-=75;
+                       Teki4.style.top=Speed4;
+                       }
+                    }
+       
+       
+                   else{
+                   
+                   if(Speed4>=400){Action4=0;}
+                   else{
+                   Speed4+=75;
+                   Teki4.style.top=Speed4;
+                       }
+                   }
+               }
+           ,1500);
+           }
+
+           if (Teki5Alive==1){}
+           else{
+             var Speed5=Teki5Y
+            var Action5
+            window.setInterval(
+                function TekiM5(){
+                    if (Action5==0){
+                        if (Speed5<=50){Action5=1;}
+                        else{
+                        Speed5-=62;
+                        Teki5.style.top=Speed5;
+                        }
+                     }
+        
+        
+                    else{
+                    
+                    if(Speed5>=400){Action5=0;}
+                    else{
+                    Speed5+=62;
+                    Teki5.style.top=Speed5;
+                        }
+                    }
+                }
+            ,1500);
+            }
+
+            if (Teki6Alive==1){}
+            else{
+              var Speed6=Teki6Y
+             var Action6
+             window.setInterval(
+                 function TekiM6(){
+                     if (Action6==0){
+                         if (Speed6<=50){Action6=1;}
+                         else{
+                         Speed6-=70;
+                         Teki6.style.top=Speed6;
+                         }
+                      }
+         
+         
+                     else{
+                     
+                     if(Speed6>=400){Action6=0;}
+                     else{
+                     Speed6+=70;
+                     Teki6.style.top=Speed6;
+                         }
+                     }
+                 }
+             ,1500);
+             }
+
+             if (Teki7Alive==1){}
+             else{
+               var Speed7=Teki7Y
+              var Action7
+              window.setInterval(
+                  function TekiM7(){
+                      if (Action7==0){
+                          if (Speed7<=50){Action7=1;}
+                          else{
+                          Speed7-=60;
+                          Teki7.style.top=Speed7;
+                          }
+                       }
+          
+          
+                      else{
+                      
+                      if(Speed7>=400){Action7=0;}
+                      else{
+                      Speed7+=60;
+                      Teki7.style.top=Speed7;
+                          }
+                      }
+                  }
+              ,1500);
+              }
+
+
+
+
+}}

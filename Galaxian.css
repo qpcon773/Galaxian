@@ -41,7 +41,7 @@
 /*-------------------------------------------------------------------------------------*/
 #Teki{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:4;/*設定圖片定位*/
+    left:4px;/*設定圖片定位*/
     top:50px;
     animation-name:Teki;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
@@ -50,7 +50,7 @@
 }
 @keyframes Teki{
     0%{
-        left:4;
+        left:4px;
     }
     100%{
         left:87px;
