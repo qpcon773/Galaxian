@@ -31,7 +31,7 @@ var BGM02=document.createElement('audio');
 BGM02.src='BGM/GameOver.mp3';
 
 var BGM03=document.createElement('audio');
-//BGM03.src='BGM/GameOver.mp3';
+BGM03.src='BGM/Complete.mp3';
 
 var SE01=document.createElement('audio');
 SE01.src='SE/Shoot.wav';
@@ -862,10 +862,11 @@ function Shooting(KeyNumber){
                     
                     
                 }
-                
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki').src='Pic/Non.png';
                 OnlyOne=0;       
-                TekiDeadGif++;
+                TekiDeadGif++;}
                         },600)
         }
 
@@ -877,9 +878,11 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki2').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
 
@@ -892,9 +895,11 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki3').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
 
@@ -907,9 +912,11 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki4').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
 
@@ -922,9 +929,11 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki5').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
 
@@ -937,9 +946,11 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki6').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
 
@@ -952,9 +963,11 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki7').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
 
@@ -967,9 +980,11 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki8').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
 
@@ -982,9 +997,11 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki9').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
 
@@ -997,9 +1014,11 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki10').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
 
@@ -1012,9 +1031,11 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki11').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
 
@@ -1027,9 +1048,11 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki12').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
 
@@ -1042,9 +1065,11 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki13').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
 
@@ -1057,12 +1082,14 @@ function Shooting(KeyNumber){
                 if (TekiDead==1){
                     
                 }
+                if(GameMode==1){}
+                else{
                 document.getElementById('Teki14').src='Pic/Non.png';
                 OnlyOne=0;
-                TekiDead++;
+                TekiDead++;}
                         },600)
         }
-
+    
     }
 
     
@@ -1071,6 +1098,7 @@ function BGMSwitch(MusicNumber){
     if (MusicNumber==1){BGM01.play();};
     if (MusicNumber==2){BGM01.pause();};
     if (MusicNumber==3){BGM02.play();};
+    if (MusicNumber==4){BGM03.play();};
             
 }
 
@@ -1138,7 +1166,7 @@ function Menu(){
 
      if (Point>=14){
             document.getElementById('CSSPoint').src='PIC/14.png';
-            C
+            GameComplete();
         }                                                                                                                                                                                                                                                                    
 }
 
@@ -1568,3 +1596,11 @@ function Change(Point){
 
 
 }}
+
+function GameComplete(){
+    GameMode=1;
+    BGMSwitch(2);
+    BGMSwitch(4);
+    document.body.innerHTML="<img src='Pic/GAME-COMPLETE.gif' class='Background'</img>\
+    <span class='GameOverButton' onclick='Reset();'></span>"
+}
