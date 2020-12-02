@@ -481,9 +481,11 @@ function Shooting(KeyNumber){
                 }
 
                 else{
+               if (GameMode==1){}
+               else{
                 BulletY-=20;
                 Bullet.style.top=BulletY;
-                AnimeTime+=20;                 
+                AnimeTime+=20;}                 
                 ;}},30)}
     }
 }
