@@ -459,7 +459,7 @@ function Shooting(KeyNumber){
     if (KeyNumber==32){
         SESwitch(1);
         Wating=1
-        document.getElementById('Bullet').style.backgroundImage="url('https://qpcon773.github.io/Galaxian/Pic/Bullet.png')";
+        document.getElementById('Bullet').style.backgroundImage="url('Pic/Bullet.png')";
         var MainJS=document.getElementById('Main');
         var BulletX=MainJS.getBoundingClientRect().left;
         var BulletY=MainJS.getBoundingClientRect().top;
