@@ -1606,3 +1606,4 @@ function GameComplete(){
     document.body.innerHTML="<img src='Pic/GAME-COMPLETE.gif' class='Background'</img>\
     <span class='GameOverButton' onclick='Reset();'></span>"
 }
+/*完成lol*/ 
