@@ -24,20 +24,20 @@ var OnlyOne
 var AnimeTime=0
 
 var BGM01=document.createElement('audio');
-BGM01.src="BGM/Start.mp3";
+BGM01.src="Start.mp3";
 BGM01.loop=true;
 
 var BGM02=document.createElement('audio');
-BGM02.src='BGM/GameOver.mp3';
+BGM02.src='GameOver.mp3';
 
 var BGM03=document.createElement('audio');
-BGM03.src='BGM/Complete.mp3';
+BGM03.src='Complete.mp3';
 
 var SE01=document.createElement('audio');
-SE01.src='SE/Shoot.wav';
+SE01.src='Shoot.wav';
 
 var SE02=document.createElement('audio');
-SE02.src='SE/Explosion.wav';
+SE02.src='Explosion.wav';
 
 
 /*為了方便底下的運算
@@ -425,14 +425,14 @@ function Move(Test){
 
 function GameOver(){
     SESwitch(2);
-    document.getElementById('Main').style.backgroundImage="url('Pic/Explosion.gif')";
+    document.getElementById('Main').style.backgroundImage="url('Explosion.gif')";
     var GameOver=0
     var ExplosionGif=setInterval(function Explosion(){
         if (GameOver==1){
             BGMSwitch(2);
             BGMSwitch(3);
 
-           document.body.innerHTML="<img src='Pic/GameOver.png' class='Background'</img>\
+           document.body.innerHTML="<img src='GameOver.png' class='Background'</img>\
            <span class='GameOverButton' onclick='Reset();'></span>"
             
             
@@ -459,7 +459,7 @@ function Shooting(KeyNumber){
     if (KeyNumber==32){
         SESwitch(1);
         Wating=1
-        document.getElementById('Bullet').style.backgroundImage="url('Pic/Bullet.png')";
+        document.getElementById('Bullet').style.backgroundImage="url('Bullet.png')";
         var MainJS=document.getElementById('Main');
         var BulletX=MainJS.getBoundingClientRect().left;
         var BulletY=MainJS.getBoundingClientRect().top;
@@ -857,7 +857,7 @@ function Shooting(KeyNumber){
         if (TekiNumber==1){
             document.getElementById("Teki").style.animationPlayState = "paused";
             SESwitch(2);
-            document.getElementById('Teki').src='Pic/Explosion.gif';
+            document.getElementById('Teki').src='Explosion.gif';
             var TekiDeadGif=0
             setInterval(function TekiExplosion(){
                 if (TekiDeadGif>=1){
@@ -866,7 +866,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki').src='Pic/Non.png';
+                document.getElementById('Teki').src='Non.png';
                 OnlyOne=0;       
                 TekiDeadGif++;}
                         },600)
@@ -874,7 +874,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==2){
             document.getElementById("Teki2").style.animationPlayState = "paused";
-            document.getElementById('Teki2').src='Pic/Explosion.gif';
+            document.getElementById('Teki2').src='Explosion.gif';
             var TekiDead=0
             setInterval(function TekiExplosion(){
                 if (TekiDead==1){
@@ -882,7 +882,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki2').src='Pic/Non.png';
+                document.getElementById('Teki2').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -890,7 +890,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==3){
             document.getElementById("Teki3").style.animationPlayState = "paused";
-            document.getElementById('Teki3').src='Pic/Explosion.gif';
+            document.getElementById('Teki3').src='Explosion.gif';
             SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
@@ -899,7 +899,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki3').src='Pic/Non.png';
+                document.getElementById('Teki3').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -907,7 +907,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==4){
             document.getElementById("Teki4").style.animationPlayState = "paused";
-            document.getElementById('Teki4').src='Pic/Explosion.gif';
+            document.getElementById('Teki4').src='Explosion.gif';
             SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
@@ -916,7 +916,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki4').src='Pic/Non.png';
+                document.getElementById('Teki4').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -924,7 +924,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==5){
             document.getElementById("Teki5").style.animationPlayState = "paused";
-            document.getElementById('Teki5').src='Pic/Explosion.gif';
+            document.getElementById('Teki5').src='Explosion.gif';
             SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
@@ -933,7 +933,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki5').src='Pic/Non.png';
+                document.getElementById('Teki5').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -941,7 +941,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==6){
             document.getElementById("Teki6").style.animationPlayState = "paused";
-            document.getElementById('Teki6').src='Pic/Explosion.gif';
+            document.getElementById('Teki6').src='Explosion.gif';
             SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
@@ -950,7 +950,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki6').src='Pic/Non.png';
+                document.getElementById('Teki6').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -958,7 +958,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==7){
             document.getElementById("Teki7").style.animationPlayState = "paused";
-            document.getElementById('Teki7').src='Pic/Explosion.gif';
+            document.getElementById('Teki7').src='Explosion.gif';
             SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
@@ -967,7 +967,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki7').src='Pic/Non.png';
+                document.getElementById('Teki7').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -975,7 +975,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==8){
             document.getElementById("Teki8").style.animationPlayState = "paused";
-            document.getElementById('Teki8').src='Pic/Explosion.gif';
+            document.getElementById('Teki8').src='Explosion.gif';
             SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
@@ -984,7 +984,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki8').src='Pic/Non.png';
+                document.getElementById('Teki8').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -992,7 +992,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==9){
             document.getElementById("Teki9").style.animationPlayState = "paused";
-            document.getElementById('Teki9').src='Pic/Explosion.gif';
+            document.getElementById('Teki9').src='Explosion.gif';
             SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
@@ -1001,7 +1001,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki9').src='Pic/Non.png';
+                document.getElementById('Teki9').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -1009,7 +1009,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==10){
             document.getElementById("Teki10").style.animationPlayState = "paused";
-            document.getElementById('Teki10').src='Pic/Explosion.gif';
+            document.getElementById('Teki10').src='Explosion.gif';
             SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
@@ -1018,7 +1018,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki10').src='Pic/Non.png';
+                document.getElementById('Teki10').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -1026,7 +1026,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==11){
             document.getElementById("Teki11").style.animationPlayState = "paused";
-            document.getElementById('Teki11').src='Pic/Explosion.gif';
+            document.getElementById('Teki11').src='Explosion.gif';
             SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
@@ -1035,7 +1035,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki11').src='Pic/Non.png';
+                document.getElementById('Teki11').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -1043,7 +1043,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==12){
             document.getElementById("Teki12").style.animationPlayState = "paused";
-            document.getElementById('Teki12').src='Pic/Explosion.gif';
+            document.getElementById('Teki12').src='Explosion.gif';
             SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
@@ -1052,7 +1052,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki12').src='Pic/Non.png';
+                document.getElementById('Teki12').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -1060,7 +1060,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==13){
             document.getElementById("Teki13").style.animationPlayState = "paused";
-            document.getElementById('Teki13').src='Pic/Explosion.gif';
+            document.getElementById('Teki13').src='Explosion.gif';
             SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
@@ -1069,7 +1069,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki13').src='Pic/Non.png';
+                document.getElementById('Teki13').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -1077,7 +1077,7 @@ function Shooting(KeyNumber){
 
         if (TekiNumber==14){
             document.getElementById("Teki14").style.animationPlayState = "paused";
-            document.getElementById('Teki14').src='Pic/Explosion.gif';
+            document.getElementById('Teki14').src='Explosion.gif';
             SESwitch(2);
             var TekiDead=0
             setInterval(function TekiExplosion(){
@@ -1086,7 +1086,7 @@ function Shooting(KeyNumber){
                 }
                 if(GameMode==1){}
                 else{
-                document.getElementById('Teki14').src='Pic/Non.png';
+                document.getElementById('Teki14').src='Non.png';
                 OnlyOne=0;
                 TekiDead++;}
                         },600)
@@ -1116,58 +1116,58 @@ function Reset(){
 function Menu(){
     
     if (Point==1){
-        document.getElementById('CSSPoint').src='PIC/1.png';
+        document.getElementById('CSSPoint').src='1.png';
     }
     
     if (Point==2){
-        document.getElementById('CSSPoint').src='PIC/2.png';
+        document.getElementById('CSSPoint').src='2.png';
     }
 
     if (Point==3){
-        document.getElementById('CSSPoint').src='PIC/3.png';
+        document.getElementById('CSSPoint').src='3.png';
     }
 
     if (Point==4){
-        document.getElementById('CSSPoint').src='PIC/4.png';
+        document.getElementById('CSSPoint').src='4.png';
     }
     if (Point==5){
-        document.getElementById('CSSPoint').src='PIC/5.png';
+        document.getElementById('CSSPoint').src='5.png';
     }
     if (Point==6){
-            document.getElementById('CSSPoint').src='PIC/6.png';
+            document.getElementById('CSSPoint').src='6.png';
     }
 
     if (Point==7){
-            document.getElementById('CSSPoint').src='PIC/7.png';
+            document.getElementById('CSSPoint').src='7.png';
             Change(7);
         }
 
     if (Point==8){
-            document.getElementById('CSSPoint').src='PIC/8.png';
+            document.getElementById('CSSPoint').src='8.png';
     }
 
     if (Point==9){
-            document.getElementById('CSSPoint').src='PIC/9.png';
+            document.getElementById('CSSPoint').src='9.png';
     }
 
     if (Point==10){
-            document.getElementById('CSSPoint').src='PIC/10.png';
+            document.getElementById('CSSPoint').src='10.png';
     }
 
     if (Point==11){
-            document.getElementById('CSSPoint').src='PIC/11.png';
+            document.getElementById('CSSPoint').src='11.png';
     }
 
     if (Point==12){
-            document.getElementById('CSSPoint').src='PIC/12.png';
+            document.getElementById('CSSPoint').src='12.png';
     }
 
     if (Point==13){
-            document.getElementById('CSSPoint').src='PIC/13.png';
+            document.getElementById('CSSPoint').src='13.png';
     }
 
      if (Point>=14){
-            document.getElementById('CSSPoint').src='PIC/14.png';
+            document.getElementById('CSSPoint').src='14.png';
             GameComplete();
         }                                                                                                                                                                                                                                                                    
 }
@@ -1603,7 +1603,7 @@ function GameComplete(){
     GameMode=1;
     BGMSwitch(2);
     BGMSwitch(4);
-    document.body.innerHTML="<img src='Pic/GAME-COMPLETE.gif' class='Background'</img>\
+    document.body.innerHTML="<img src='GAME-COMPLETE.gif' class='Background'</img>\
     <span class='GameOverButton' onclick='Reset();'></span>"
 }
 /*完成lol*/ 
