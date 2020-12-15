@@ -20,7 +20,7 @@ var Teki13Alive
 var Teki14Alive
 var OnlyOne
 
-
+var ButtonMove
 var AnimeTime=0
 
 var BGM01=document.createElement('audio');
@@ -44,8 +44,8 @@ SE02.src='Explosion.wav';
   主角機體的原始座標就設定在這裏*/
 
   window.onload=function Start(){
-    Main.style.top=215;
-    Main.style.left=295;
+    Main.style.top=600;
+    Main.style.left=612;
     
     
 setInterval(function Damege(){
@@ -114,32 +114,32 @@ function Set(KeyNumber){
       再來利用 "getBoundingClienRect()" 抓出主角機體的XY值*/
 
     if (KeyNumber==38){
-        if (MainY<=20){
-            Main.style.top=0;
+        if (MainY<=70){
+            Main.style.top=50;
         }else{
             Main.style.top=parseInt(Main.style.top)-speed+"px";
              };
     };
 
     if (KeyNumber==40){
-        if (MainY>=410){
-            Main.style.top=430;
+        if (MainY>=623){
+            Main.style.top=643;
         }else{
             Main.style.top=parseInt(Main.style.top)+speed+"px";
              };
     };
 
     if (KeyNumber==37){
-        if (MainX<=20){
-            Main.style.left=0;
+        if (MainX<=170){
+            Main.style.left=150;
         }else{
             Main.style.left=parseInt(Main.style.left)-speed+"px";
              };
     };
 
     if (KeyNumber==39){
-        if (MainX>=570){
-            Main.style.left=590;
+        if (MainX>=1004){
+            Main.style.left=1024;
         }else{
             Main.style.left=parseInt(Main.style.left)+speed+"px";
              };
@@ -472,7 +472,7 @@ function Shooting(KeyNumber){
     
        var BulletAnime=window.setInterval(
             function BulletTime(){
-                if (AnimeTime>=640){
+                if (AnimeTime>=660){
                       
                     window.clearInterval(BulletAnime);
                     Wating=0;
@@ -1235,7 +1235,7 @@ function Change(Point){
     
                 else{
                 
-                if(Speed>=400){Action=0;}
+                if(Speed>=600){Action=0;}
                 else{
                 Speed+=60;
                 Teki.style.top=Speed;
@@ -1262,7 +1262,7 @@ function Change(Point){
      
                  else{
                  
-                 if(Speed2>=400){Action2=0;}
+                 if(Speed2>=600){Action2=0;}
                  else{
                  Speed2+=70;
                  Teki2.style.top=Speed2;
@@ -1289,7 +1289,7 @@ function Change(Point){
       
                   else{
                   
-                  if(Speed3>=400){Action3=0;}
+                  if(Speed3>=600){Action3=0;}
                   else{
                   Speed3+=62;
                   Teki3.style.top=Speed3;
@@ -1316,7 +1316,7 @@ function Change(Point){
        
                    else{
                    
-                   if(Speed4>=400){Action4=0;}
+                   if(Speed4>=600){Action4=0;}
                    else{
                    Speed4+=75;
                    Teki4.style.top=Speed4;
@@ -1343,7 +1343,7 @@ function Change(Point){
         
                     else{
                     
-                    if(Speed5>=400){Action5=0;}
+                    if(Speed5>=600){Action5=0;}
                     else{
                     Speed5+=62;
                     Teki5.style.top=Speed5;
@@ -1370,7 +1370,7 @@ function Change(Point){
          
                      else{
                      
-                     if(Speed6>=400){Action6=0;}
+                     if(Speed6>=600){Action6=0;}
                      else{
                      Speed6+=70;
                      Teki6.style.top=Speed6;
@@ -1397,7 +1397,7 @@ function Change(Point){
           
                       else{
                       
-                      if(Speed7>=400){Action7=0;}
+                      if(Speed7>=600){Action7=0;}
                       else{
                       Speed7+=60;
                       Teki7.style.top=Speed7;
@@ -1424,7 +1424,7 @@ function Change(Point){
            
                        else{
                        
-                       if(Speed8>=400){Action8=0;}
+                       if(Speed8>=600){Action8=0;}
                        else{
                        Speed8+=75;
                        Teki8.style.top=Speed8;
@@ -1451,7 +1451,7 @@ function Change(Point){
             
                         else{
                         
-                        if(Speed9>=400){Action9=0;}
+                        if(Speed9>=600){Action9=0;}
                         else{
                         Speed9+=75;
                         Teki9.style.top=Speed9;
@@ -1478,7 +1478,7 @@ function Change(Point){
              
                          else{
                          
-                         if(Speed10>=400){Action10=0;}
+                         if(Speed10>=600){Action10=0;}
                          else{
                          Speed10+=60;
                          Teki10.style.top=Speed10;
@@ -1505,7 +1505,7 @@ function Change(Point){
               
                           else{
                           
-                          if(Speed11>=400){Action11=0;}
+                          if(Speed11>=600){Action11=0;}
                           else{
                           Speed11+=75;
                           Teki11.style.top=Speed11;
@@ -1532,7 +1532,7 @@ function Change(Point){
                
                            else{
                            
-                           if(Speed12>=400){Action12=0;}
+                           if(Speed12>=600){Action12=0;}
                            else{
                            Speed12+=65;
                            Teki12.style.top=Speed12;
@@ -1559,7 +1559,7 @@ function Change(Point){
                 
                             else{
                             
-                            if(Speed13>=400){Action13=0;}
+                            if(Speed13>=600){Action13=0;}
                             else{
                             Speed13+=75;
                             Teki13.style.top=Speed13;
@@ -1586,9 +1586,9 @@ function Change(Point){
                  
                              else{
                              
-                             if(Speed14>=400){Action14=0;}
+                             if(Speed14>=600){Action14=0;}
                              else{
-                             Speed14+=64;
+                             Speed14+=62;
                              Teki14.style.top=Speed14;
                                  }
                              }
@@ -1607,3 +1607,65 @@ function GameComplete(){
     <span class='GameOverButton' onclick='Reset();'></span>"
 }
 /*完成lol*/ 
+
+function UPButton (Mouse){    
+    if (Mouse==1){
+     ButtonMove=window.setInterval(function Onmousedown (){
+          Set(38);
+          
+      },70)  
+    }
+
+   if (Mouse==2){
+    
+   window.clearInterval(ButtonMove);
+    }
+
+}
+
+function LeftButton (Mouse){    
+    if (Mouse==1){
+     ButtonMove=window.setInterval(function Onmousedown (){
+          Set(37);
+          
+      },70)  
+    }
+
+   if (Mouse==2){
+    
+   window.clearInterval(ButtonMove);
+    }
+
+}
+
+function RightButton (Mouse){    
+    if (Mouse==1){
+     ButtonMove=window.setInterval(function Onmousedown (){
+          Set(39);
+          
+      },70)  
+    }
+
+   if (Mouse==2){
+    
+   window.clearInterval(ButtonMove);
+    }
+
+}
+
+function DownButton (Mouse){    
+    if (Mouse==1){
+     ButtonMove=window.setInterval(function Onmousedown (){
+          Set(40);
+          
+      },70)  
+    }
+
+   if (Mouse==2){
+    
+   window.clearInterval(ButtonMove);
+    }
+
+}
+
+/*2.0新增環節*/ 

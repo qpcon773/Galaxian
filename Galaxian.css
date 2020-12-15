@@ -9,8 +9,8 @@
    height:63px;
    background-image:url('D-Reset.png');
    position:absolute; 
-   margin-left:-425px;
-   margin-top:320px;
+   margin-left:-565px;
+   margin-top:400px;
 }
 
 .GameOverButton:hover{
@@ -22,43 +22,49 @@
 
 .Menu{
     margin-top:-10px;
-    Margin-left:-640px;
+    Margin-left:-1074px;
     position:absolute;
 }
 
 .Up{
     width:50px;
     height:50px;
-    margin-left:50px
+    margin-left:40px;
+    margin-top:-446px;
 }
 
 .Left{
     width:50px;
     height:50px;
+    margin-top:-396px;
+    margin-left:-10px;
 
 }
 
 .Right{
     width:50px;
     height:50px;
-    margin-left:50px;
+    margin-left:90px;
+    margin-top:-396px;
 }
 
 .Down{
     width:50px;
     height:50px;
-    margin-left:50px;
+    margin-left:40px;
+    margin-top:-346px;
 }
 
 .Fire{
     width:50px;
     height:50px;
-    margin-left:300px;
+    margin-left:1114px;
+    margin-top:-406px;
 }
 
 #CSSPoint{
-    margin-top:-8px;
-    margin-left:-640px;
+    margin-top:-10px;
+    margin-left:-1074px;
     position:absolute;
 }
 
@@ -71,7 +77,7 @@
 /*-------------------------------------------------------------------------------------*/
 #Teki{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:4px;/*設定圖片定位*/
+    left:150px;/*設定圖片定位*/
     top:50px;
     animation-name:Teki;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
@@ -80,16 +86,16 @@
 }
 @keyframes Teki{
     0%{
-        left:4px;
+        left:150px;
     }
     100%{
-        left:87px;
+        left:275px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 #Teki2{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:87;/*設定圖片定位*/
+    left:275px;/*設定圖片定位*/
     top:50px;
     animation-name:Teki2;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
@@ -98,17 +104,17 @@
 }
 @keyframes Teki2{
     0%{
-        left:87;
+        left:275px;
     }
     100%{
-        left:170px;
+        left:400px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 #Teki3{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:170;/*設定圖片定位*/
+    left:400px;/*設定圖片定位*/
     top:50px;
     animation-name:Teki3;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
@@ -117,17 +123,17 @@
 }
 @keyframes Teki3{
     0%{
-        left:170;
+        left:400px;
     }
     100%{
-        left:253px;
+        left:525px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 #Teki4{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:253;/*設定圖片定位*/
+    left:525px;/*設定圖片定位*/
     top:50px;
     animation-name:Teki4;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
@@ -136,17 +142,17 @@
 }
 @keyframes Teki4{
     0%{
-        left:253;
+        left:525px;
     }
     100%{
-        left:336px;
+        left:650px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 #Teki5{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:336;/*設定圖片定位*/
+    left:650px;/*設定圖片定位*/
     top:50px;
     animation-name:Teki5;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
@@ -155,17 +161,17 @@
 }
 @keyframes Teki5{
     0%{
-        left:336;
+        left:650px;
     }
     100%{
-        left:419px;
+        left:775px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 #Teki6{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:419;/*設定圖片定位*/
+    left:775px;/*設定圖片定位*/
     top:50px;
     animation-name:Teki6;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
@@ -174,17 +180,17 @@
 }
 @keyframes Teki6{
     0%{
-        left:419;
+        left:775px;
     }
     100%{
-        left:502px;
+        left:900px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 #Teki7{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:502;/*設定圖片定位*/
+    left:900px;/*設定圖片定位*/
     top:50px;
     animation-name:Teki7;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
@@ -193,18 +199,18 @@
 }
 @keyframes Teki7{
     0%{
-        left:502;
+        left:900px;
     }
     100%{
-        left:585px;
+        left:1024px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 #Teki8{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:4;/*設定圖片定位*/
-    top:100px;
+    left:150px;/*設定圖片定位*/
+    top:150px;
     animation-name:Teki8;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
     animation-iteration-count:infinite;/*重複次數:無限次*/
@@ -212,17 +218,17 @@
 }
 @keyframes Teki8{
     0%{
-        left:4;
+        left:150px;
     }
     100%{
-        left:87px;
+        left:275px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 #Teki9{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:87;/*設定圖片定位*/
-    top:100px;
+    left:275px;/*設定圖片定位*/
+    top:150px;
     animation-name:Teki9;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
     animation-iteration-count:infinite;/*重複次數:無限次*/
@@ -230,18 +236,18 @@
 }
 @keyframes Teki9{
     0%{
-        left:87;
+        left:275px;
     }
     100%{
-        left:170px;
+        left:400px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 #Teki10{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:170;/*設定圖片定位*/
-    top:100px;
+    left:400px;/*設定圖片定位*/
+    top:150px;
     animation-name:Teki10;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
     animation-iteration-count:infinite;/*重複次數:無限次*/
@@ -249,18 +255,18 @@
 }
 @keyframes Teki10{
     0%{
-        left:170;
+        left:400px;
     }
     100%{
-        left:253px;
+        left:525px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 #Teki11{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:253;/*設定圖片定位*/
-    top:100px;
+    left:525px;/*設定圖片定位*/
+    top:150px;
     animation-name:Teki11;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
     animation-iteration-count:infinite;/*重複次數:無限次*/
@@ -268,18 +274,18 @@
 }
 @keyframes Teki11{
     0%{
-        left:253;
+        left:525px;
     }
     100%{
-        left:336px;
+        left:650px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 #Teki12{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:336;/*設定圖片定位*/
-    top:100px;
+    left:650px;/*設定圖片定位*/
+    top:150px;
     animation-name:Teki12;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
     animation-iteration-count:infinite;/*重複次數:無限次*/
@@ -287,18 +293,18 @@
 }
 @keyframes Teki12{
     0%{
-        left:336;
+        left:650px;
     }
     100%{
-        left:419px;
+        left:775px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 #Teki13{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:419;/*設定圖片定位*/
-    top:100px;
+    left:775px;/*設定圖片定位*/
+    top:150px;
     animation-name:Teki13;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
     animation-iteration-count:infinite;/*重複次數:無限次*/
@@ -306,18 +312,18 @@
 }
 @keyframes Teki13{
     0%{
-        left:419;
+        left:775px;
     }
     100%{
-        left:502px;
+        left:900px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------*/
 #Teki14{
     position:absolute;/*設定定位:不會被特別定位*/
-    left:502;/*設定圖片定位*/
-    top:100px;
+    left:900px;/*設定圖片定位*/
+    top:150px;
     animation-name:Teki7;/*動畫名稱*/
     animation-duration:2s;/*動畫時間*/
     animation-iteration-count:infinite;/*重複次數:無限次*/
@@ -325,10 +331,10 @@
 }
 @keyframes Teki14{
     0%{
-        left:502;
+        left:900px;
     }
     100%{
-        left:585px;
+        left:1024px;
     }
 }
 /*-------------------------------------------------------------------------------------*/
@@ -336,15 +342,4 @@
     position:absolute;
     width:28px;
     height:28px;
-    animation-name:Bullet;
-    animation-duration:2s;
-    animation-iteration-count:infinite;
-    animation-play-state:paused;
-}
-@keyframes Bullet{
-    0%{
-        
-    }
-    100%{
-    top:-508px;}
 }
